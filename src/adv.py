@@ -70,7 +70,6 @@ elif player_start.upper() == 'Y':
 # Collect player's name and instantiate player...by default, player starts in 'outside' room
 player_name = input("First things first. Tell me, what is your name? ")
 current_player = Player(player_name, room['outside'])
-
 print("It's nice to meet you ", current_player.name.capitalize(), "!", current_player.current_room)
 
 # Main game loop: 
@@ -107,7 +106,7 @@ while is_playing:
         if (hasattr(current_player.current_room, 'w_to')):
             print(current_player.current_room.w_to)
         else: 
-            print("Looks like a wall with no doors. Head in a different direction.")
+            print("That's definitely the wrong way. Head in a different direction.")
 
     else: 
         print("That's not an option. Please enter a valid direction. Remember, N = north, E = east, S = south, W = west.")
