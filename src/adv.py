@@ -169,7 +169,8 @@ while is_playing:
 
         elif action == 'W':
             if (hasattr(current_player.current_room, 'w_to')):
-                print(current_player.current_room.w_to)
+                current_player.current_room = current_player.current_room.w_to
+                print(current_player.current_room)
             else: 
                 print("\nThat's definitely the wrong way. Head in a different direction.")
 
